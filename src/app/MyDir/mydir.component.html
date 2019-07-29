@@ -1,0 +1,7 @@
+
+<label>My Assignment</label><hr/>
+<button class = "btn btn-primary" (click)="onAddItemToList()">Show</button><br>
+<p [hidden]=showdataorNot>{{mytextdata}}</p>
+<li>
+    <ul *ngFor="let item of myItemList" [ngStyle]="{backgroundColor:item >=5 ? 'black':'transparent'}" [ngClass]="{'white-text':item>=5}">{{item}}</ul>
+</li>

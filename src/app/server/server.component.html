@@ -1,0 +1,17 @@
+
+<input type="text" class="form-control" (input)="onUpdateServer($event)" [(ngModel)]="serverName"><br>
+
+
+
+
+
+<button class="btn btn-primary" (click)=onCreateServer()>Add Server</button>
+<p *ngIf = "serverCreated; else noServer" >{{serverName}}</p>
+<ng-template #noServer>
+    <p> No Server is created.</p>
+</ng-template>
+
+<button class="btn btn-primary" (click)=onshowHide()>show List</button>
+<li>
+    <ol *ngFor = "let item of MyListObjects" [hidden]="listStatus">{{item}}</ol>
+</li>
